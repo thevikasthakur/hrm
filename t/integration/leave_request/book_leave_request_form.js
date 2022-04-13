@@ -19,7 +19,7 @@ var test             = require('selenium-webdriver/testing'),
     check_booking_func     = require('../../lib/check_booking_on_calendar'),
     add_new_user_func      = require('../../lib/add_new_user');
 
-describe("Check the client side logic to facilitate filling new absence form", function(){
+describe("Check the client side logic to facilitate filling New Leave Request form", function(){
 
   this.timeout( config.get_execution_timeout() );
 

@@ -240,13 +240,13 @@ describe('Ensure that leaves with not full days are rendered properly', function
       [9, 10, 11, 16, 17, 23, 24].map(day => driver.findElement(By.css(`.month_June td.half_1st.day_${day} span`)).then(el => el.getAttribute('data-original-title')))
     ))
     .then(([title9, title10, title11, title16, title17, title23, title24]) => {
-      expect(title9).to.be.eq('Holiday (morning) Sick Leave (afternoon): New absence waiting approval');
-      expect(title10).to.be.eq('Sick Leave: New absence waiting approval');
-      expect(title11).to.be.eq('Sick Leave: New absence waiting approval');
-      expect(title16).to.be.eq('Holiday (morning) : New absence waiting approval');
-      expect(title17).to.be.eq('Holiday (afternoon): New absence waiting approval');
-      expect(title23).to.be.eq('Holiday (afternoon): New absence waiting approval');
-      expect(title24).to.be.eq('Holiday (morning) : New absence waiting approval');
+      expect(title9).to.be.eq('Holiday (morning) Sick Leave (afternoon): New Leave Request waiting approval');
+      expect(title10).to.be.eq('Sick Leave: New Leave Request waiting approval');
+      expect(title11).to.be.eq('Sick Leave: New Leave Request waiting approval');
+      expect(title16).to.be.eq('Holiday (morning) : New Leave Request waiting approval');
+      expect(title17).to.be.eq('Holiday (afternoon): New Leave Request waiting approval');
+      expect(title23).to.be.eq('Holiday (afternoon): New Leave Request waiting approval');
+      expect(title24).to.be.eq('Holiday (morning) : New Leave Request waiting approval');
       return Promise.resolve(1);
     })
     .then(function(){ done() });
