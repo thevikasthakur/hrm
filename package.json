@@ -1,8 +1,8 @@
 {
-  "name": "TimeOff.Management",
+  "name": "HRM",
   "version": "1.0.0",
   "private": false,
-  "description": "Simple yet powerful absence management software for small and medium size business",
+  "description": "HR Management Application",
   "engines": {
     "node": ">=13.0.0"
   },
@@ -14,6 +14,7 @@
     "cookie-parser": "^1.3.5",
     "csv": "~0.4.6",
     "debug": "4.1.0",
+    "dotenv": "^16.0.0",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.13.0",

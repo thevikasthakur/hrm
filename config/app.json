@@ -1,15 +1,8 @@
 {
   "allow_create_new_accounts" : true,
   "send_emails"              : false,
-  "application_sender_email" : "email@test.com",
-  "email_transporter" : {
-    "host" : "localhost",
-    "port" : 25,
-    "auth" : {
-      "user" : "user",
-      "pass" : "pass"
-    }
-  },
+  "application_sender_email" : "hr@inzint.com",
+  "email_transporter" : { },
   "sessionStore": {
     "useRedis": false,
     "redisConnectionConfiguration": {
@@ -18,8 +11,7 @@
     }
   },
   "ga_analytics_on" : false,
-  "crypto_secret" : "!2~`HswpPPLa22+=±§sdq qwe,appp qwwokDF_",
-  "application_domain" : "http://app.timeoff.management",
-  "promotion_website_domain" : "http://timeoff.management",
+  "application_domain" : "http://hrm.inzint.com",
+  "promotion_website_domain" : "http://hrm.inzint.com",
   "locale_code_for_sorting": "en"
 }

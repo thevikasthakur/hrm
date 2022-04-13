@@ -70,7 +70,7 @@ describe('Bulk import of users', function(){
         'test_csv_'+i+'_'+token+'@test.com',
         'name_csv_'+i+'_'+token+'@test.com',
         'lastname_csv_'+i+'_'+token+'@test.com',
-        'Sales'
+        'Management'
       ]);
     }
 

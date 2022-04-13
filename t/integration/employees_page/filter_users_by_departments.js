@@ -25,7 +25,7 @@ var test                 = require('selenium-webdriver/testing'),
  *    * create new departmen: "IT"
  *    * create new user, place it into newly created department
  *    * open "users" page and make sure there are both there
- *    * click "Sales" department link and make sure that only admin user is presented
+ *    * click "Management" department link and make sure that only admin user is presented
  *    * click "IT" department and make sure only second user is visible
  *    * click "All" and make sure that both users are presented
  *
@@ -86,7 +86,7 @@ describe('Check filtering on "users" page', function(){
       application_host : application_host,
       driver           : driver,
       // We know that departments are ordered alphabetically, so newly
-      // added "ID" is before default "Sales" one
+      // added "ID" is before default "Management" one
       department_index : "0",
     })
     .then(function(){ done() });
@@ -134,10 +134,10 @@ describe('Check filtering on "users" page', function(){
       });
   });
 
-  it('Click on "Sales"', function(done){
+  it('Click on "Management"', function(done){
    driver
      // Departments are ordered by names so we are sure that second item
-     // after general link "All" is going to be "Sales"
+     // after general link "All" is going to be "Management"
      .findElement( By.css('div.all-departments a:nth-child(3)') )
      .then(function(element){
        element.click();
@@ -154,7 +154,7 @@ describe('Check filtering on "users" page', function(){
         return elements[0].getText();
       })
       .then(function(text){
-        expect(text).to.be.equal('Sales');
+        expect(text).to.be.equal('Management');
         done();
       });
   });

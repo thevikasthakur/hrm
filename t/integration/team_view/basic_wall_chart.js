@@ -23,8 +23,8 @@ var test                 = require('selenium-webdriver/testing'),
 /*
  *  Scenario to check in thus test.
  *
- *    * Register new account for user A (supervisor and member of Sales department)
- *    * Create a new user B in Sales department
+ *    * Register new account for user A (supervisor and member of Management department)
+ *    * Create a new user B in Management department
  *    * Open Team view page and make sure that both users are shown A and B
  *    * Create new department IT
  *    * Create new user C and make sure that he is a member and supervisor of IT department.
@@ -164,7 +164,7 @@ describe('Check basic scenario for Team view page', function(){
       application_host : application_host,
       driver           : driver,
       // We know that departments are ordered alphabetically, so newly
-      // added "ID" is before default "Sales" one
+      // added "ID" is before default "Management" one
       department_index : "0",
     })
     .then(function(data){

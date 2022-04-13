@@ -125,7 +125,7 @@ describe('Check departments list page', function(){
       .findElements(By.css('a[data-vpp-department-name="1"]'))
       .then(function(els){ return Bluebird.map(els, function(el){ return el.getText() }) })
       .then(function(texts){
-        expect(texts).to.have.eql(['AAA', 'Sales'], 'Check the order of names');
+        expect(texts).to.have.eql(['AAA', 'Management'], 'Check the order of names');
         done();
       });
   });
@@ -160,7 +160,7 @@ describe('Check departments list page', function(){
       .findElements(By.css('a[data-vpp-department-name="1"]'))
       .then(function(els){ return Bluebird.map(els, function(el){ return el.getText() }) })
       .then(function(texts){
-        expect(texts).to.have.eql(['AAA', 'Sales', 'ZZZ'], 'Check the order of names');
+        expect(texts).to.have.eql(['AAA', 'Management', 'ZZZ'], 'Check the order of names');
         done();
       });
   });

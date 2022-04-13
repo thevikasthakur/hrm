@@ -1,5 +1,9 @@
 {
   "countries" : {
+    "IN": {
+      "name": "India",
+      "bank_holidays": []
+    },
     "AD": {
       "name": "Andorra",
       "bank_holidays": [
