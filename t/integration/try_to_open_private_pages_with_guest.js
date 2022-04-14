@@ -51,7 +51,7 @@ describe('Try to access private pages with guest user', function(){
     driver.get( application_host);
     driver.getTitle()
       .then(function(title){
-        expect(title).to.be.equal('Time Off Management');
+        expect(title).to.be.equal('Inzint HRMS');
       });
     driver.quit().then(function(){ done() });
   });
