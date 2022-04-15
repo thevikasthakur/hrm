@@ -1,8 +1,53 @@
 {
-  "countries" : {
+  "countries": {
     "IN": {
       "name": "India",
-      "bank_holidays": []
+      "bank_holidays": [
+        {
+          "date": "2022-01-26",
+          "name": "Republic Day"
+        },
+        {
+          "date": "2022-03-18",
+          "name": "Holi"
+        },
+        {
+          "date": "2022-04-15",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2022-05-13",
+          "name": "Eid al-Fitr"
+        },
+        {
+          "date": "2022-08-15",
+          "name": "Independence Day"
+        },
+        {
+          "date": "2022-10-02",
+          "name": "Gandhi Jayanti"
+        },
+        {
+          "date": "2022-10-04",
+          "name": "Maha Navami"
+        },
+        {
+          "date": "2022-10-05",
+          "name": "Vijayadashami"
+        },
+        {
+          "date": "2022-10-24",
+          "name": "Diwali"
+        },
+        {
+          "date": "2022-10-25",
+          "name": "Govardhan Puja"
+        },
+        {
+          "date": "2022-12-25",
+          "name": "Christmas"
+        }
+      ]
     },
     "AD": {
       "name": "Andorra",
@@ -27230,8 +27275,8 @@
       "name": "Other",
       "bank_holidays": [
         {
-          "name" : "Early May bank holiday",
-          "date" : "2015-05-04"
+          "name": "Early May bank holiday",
+          "date": "2015-05-04"
         }
       ]
     }
