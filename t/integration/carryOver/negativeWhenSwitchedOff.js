@@ -62,7 +62,7 @@ describe('No negative allowanca is carried overs', function(){
     .then(() => done())
   });
 
-  it('Update user to have her leaves be auto apporved', done => {
+  it('Update user to have her requests be auto apporved', done => {
     openPageFunc({
       driver,
       url: `${applicationHost}users/edit/${userId}/`,
@@ -80,7 +80,7 @@ describe('No negative allowanca is carried overs', function(){
     .then(() => done());
   });
 
-  it("Add and approve week long leave in last year", done => {
+  it("Add and approve week long request in last year", done => {
     const lastYear = moment.utc().add(-1,'y').year();
 
     openPageFunc({driver, url: applicationHost})
@@ -96,7 +96,7 @@ describe('No negative allowanca is carried overs', function(){
           selector : 'input#to',
           value    : `${lastYear}-06-08`,
         }],
-        message : /New leave request was added/,
+        message : /New request was added/,
       }))
       .then(() => done());
   });

@@ -6,13 +6,13 @@
 {{> show_flash_messages }}
 
 <div class="row main-row_header">
-  <p class="col-md-12">Leave request to approve</p>
+  <p class="col-md-12">Requests to approve</p>
 </div>
 
 <div class="row">
   {{# unless to_be_approved_leaves}}
   <div class="col-md-12 text-muted">
-    There are no leave requests to decide on.
+    There are no requests to decide on.
   </div>
   {{else}}
   <div class="col-md-12">
@@ -24,7 +24,7 @@
           <th>Employee</th>
           <th>Department</th>
           <th>Date of request</th>
-          <th>Leave dates</th>
+          <th>Request dates</th>
           <th>Type</th>
           <th>Days</th>
           <th class="col-xs-2">Comment</th>

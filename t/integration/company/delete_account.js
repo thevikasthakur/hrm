@@ -55,7 +55,7 @@ describe("Remove company account", function(){
       .then(() => done())
   });
 
-  it("Book a leave by user from company A", done => {
+  it("Book a request by user from company A", done => {
     driver.findElement(By.css('#book_time_off_btn'))
       .then(el => el.click())
       // This is very important line when working with Bootstrap modals!
@@ -73,7 +73,7 @@ describe("Remove company account", function(){
             selector : 'input#to',
             value : '2018-06-06',
         }],
-        message : /New leave request was added/,
+        message : /New request request was added/,
       }))
       .then(() => done());
   });
@@ -99,7 +99,7 @@ describe("Remove company account", function(){
       .then(() => done())
   });
 
-  it("Book a leave by user from company B", done => {
+  it("Book a request by user from company B", done => {
     driver.findElement(By.css('#book_time_off_btn'))
       .then(el => el.click())
       // This is very important line when working with Bootstrap modals!
@@ -117,7 +117,7 @@ describe("Remove company account", function(){
             selector : 'input#to',
             value : '2018-06-07',
         }],
-        message : /New leave request was added/,
+        message : /New request was added/,
       }))
       .then(() => done());
   });
@@ -209,7 +209,7 @@ describe("Remove company account", function(){
     .then(() => done());
   });
 
-  it("Ensure that admin still has a leave registered", done => {
+  it("Ensure that admin still has a request registered", done => {
     open_page_func({
       url    : application_host + 'requests/',
       driver : driver,
@@ -217,7 +217,7 @@ describe("Remove company account", function(){
     .then(() => driver.findElements(By.css('table.user-requests-table td[data-tom-leave-dates="1"]')))
 
     .then(els => {
-      expect(els.length, 'Ensure two elements with leave dates were found').to.be.equal(1);
+      expect(els.length, 'Ensure two elements with request dates were found').to.be.equal(1);
       return Promise.map(els, (el => el.getText()));
     })
     .then(dates_str => {

@@ -34,7 +34,7 @@ var test                 = require('selenium-webdriver/testing'),
  *
  * */
 
-describe('Leave request cancelation', function(){
+describe('request cancelation', function(){
 
   this.timeout( config.get_execution_timeout() );
 
@@ -70,7 +70,7 @@ describe('Leave request cancelation', function(){
     .then(() => done())
   });
 
-  it("Open Book leave popup window", function(done){
+  it("Open Book request popup window", function(done){
     driver.findElement(By.css('#book_time_off_btn'))
       .then(function(el){ return el.click() })
       .then(function(el){
@@ -80,7 +80,7 @@ describe('Leave request cancelation', function(){
       .then(function(){ done() });
   });
 
-  it("Submit new leave request for user A one weekday", function(done){
+  it("Submit new request for user A one weekday", function(done){
     const currentYear = moment.utc().year();
     submit_form_func({
       driver      : driver,
@@ -91,7 +91,7 @@ describe('Leave request cancelation', function(){
         selector : 'input#to',
         value    : `${currentYear}-05-07`,
       }],
-      message : /New leave request was added/,
+      message : /New request was added/,
     })
     .then(function(){done()});
   });
@@ -104,7 +104,7 @@ describe('Leave request cancelation', function(){
     .then(function(){ done() });
   });
 
-  it("Approve new leave request", function(done){
+  it("Approve new request", function(done){
     driver.findElement(By.css(
       'tr[vpp="pending_for__'+email_A+'"] .btn-success'
     ))

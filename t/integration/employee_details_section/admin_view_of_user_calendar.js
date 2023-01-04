@@ -52,7 +52,7 @@ describe('Ensure employee calendar from admin section shows bookings', function(
     await loginUserFunc({ application_host, driver, user_email: emailB });
   });
 
-  it("Open Book leave popup window", async () => {
+  it("Open Book request popup window", async () => {
     const el = await driver.findElement(By.css('#book_time_off_btn'));
     await el.click();
 
@@ -60,7 +60,7 @@ describe('Ensure employee calendar from admin section shows bookings', function(
     await driver.sleep(1000);
   });
 
-  it("Submit new leave request from user B", async () => {
+  it("Submit new request from user B", async () => {
     await submitFormFunc({
       driver,
       form_params : [{
@@ -70,7 +70,7 @@ describe('Ensure employee calendar from admin section shows bookings', function(
         selector : 'input#to',
         value    : someWeekdayDate,
       }],
-      message : /New leave request was added/,
+      message : /New request was added/,
     });
   });
 

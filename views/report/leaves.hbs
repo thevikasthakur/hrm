@@ -1,16 +1,16 @@
 {{> header }}
 
-<h1>Leaves</h1>
+<h1>Leaves & WFH Requests</h1>
 
 <div class="row">
-  <div class="col-md-6 lead">Shows absences in a given period</div>
+  <div class="col-md-6 lead">Shows Leaves & WFH Requests in a given period</div>
 </div>
 
 {{> show_flash_messages }}
 
 <ol class="breadcrumb">
   <li><a href="/reports/">All reports</a></li>
-  <li class="active">Absences</li>
+  <li class="active">Leaves & WFH Requests</li>
 </ol>
 <div class="row main-row_header">
   <span class="col-md-12">Filter</span>
@@ -38,7 +38,7 @@
                 >
                 <span class="input-group-addon">(YYYY-MM-DD)</span>
               </div>
-              <span class="help-block">Date range that that contain either start or end of date of a leave</span>
+              <span class="help-block">Date range that that contain either start or end of date of a Leave or WFH Request</span>
             </div>
           </div>
           <div class="col-md-3">
@@ -83,12 +83,12 @@
   </div>
 </div>
 <div class="row main-row_header">
-  <span class="col-md-12">Leaves</span>
+  <span class="col-md-12">Leaves & WFH Requests</span>
 </div>
 <div class="row">
   {{#unless leaves}}
   <div class="col-md-12 text-muted">
-    There are no leave requests.
+    There are no requests.
   </div>
   {{else}}
   <div class="col-md-12">
