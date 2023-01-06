@@ -4,6 +4,6 @@ Request decision is made
 
 {{> email/leave_comments comments=comments }}
 
-<p>You just processed {{#if was_pended_revoke}}cancellation of {{/if}} request {{>leave_request_detail leave=leave }} for {{#with requester}}{{this.full_name}}{{/with}}: to {{action}}.</p>
+<p>You just processed {{#if was_pended_revoke}}cancellation of {{/if}} {{>leave_request_detail leave=leave }} request for {{#with requester}}{{this.full_name}}{{/with}}: to {{action}}.</p>
 
 <p>Thanks</p>
